@@ -1,0 +1,2 @@
+問2
+lambdaとmapとを組み合わせる。→lambdaとsortedとを組み合わせる。
