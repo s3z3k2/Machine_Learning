@@ -13,9 +13,9 @@ class TwoLayerNet:
         # 重みの初期化
         self.params = {}
         self.params['W1'] = np.random.randn(input_size, hidden_size)
-        self.params['b1'] = np.random.randn(hidden_size)
+        self.params['b1'] = np.zeros(hidden_size)
         self.params['W2'] = np.random.randn(hidden_size, output_size)
-        self.params['b2'] = np.random.randn(output_size)
+        self.params['b2'] = np.zeros(output_size)
 
         # レイヤの作成
         self.layers = OrderedDict()

@@ -95,7 +95,6 @@ class Softmax_with_loss_Layer:
 	def forward(self,x,t):
 		self.t = t
 		self.y = func.softmax(x)
-		self.loss = func.cross_entropy_error(self.y,self.t)
 
 	def backward(self,dout = 1):
 		batch_size = self.t.shape[0]

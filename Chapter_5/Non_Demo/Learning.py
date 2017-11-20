@@ -15,7 +15,7 @@ net = TwoLayerNet.TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
 # ハイパーパラメタの設定
-iter_num = 10000
+iter_num = 100000
 train_size = x_train.shape[0]
 batch_size = 60
 learning_rate = 0.1
