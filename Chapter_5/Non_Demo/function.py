@@ -9,7 +9,7 @@ class function:
 			x = x.T
 			x = x - np.max(x, axis=0)
 			y = np.exp(x) / np.sum(np.exp(x), axis=0)
-			return y.T 
+			return y.T
 
 		x = x - np.max(x) # オーバーフロー対策
 		return np.exp(x) / np.sum(np.exp(x))
@@ -24,3 +24,9 @@ class function:
 		batch_size = y.shape[0]
 
 		return -np.sum(t * np.log(y + delta)) / batch_size
+
+	def sigmoid(self, x):
+		return 1 / (1 + np.exp(-x))
+
+	def ReLU(self, x):
+		return np.maximum(0,x)
